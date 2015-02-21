@@ -54,17 +54,17 @@ unsigned getBaseAddress(unsigned temp_kernel_offset, unsigned temp_ramdisk_offse
 
 void printHeaderInfo(boot_img_hdr *pheader)
 {
-	printf("kernel size     = %x\n",pheader->kernel_size);
-	printf("kernel address  = %x\n",pheader->kernel_addr);
+	printf("kernel size     = 0x%x\n",pheader->kernel_size);
+	printf("kernel address  = 0x%x\n",pheader->kernel_addr);
 
-	printf("ramdisk size    = %x\n",pheader->ramdisk_size);
-	printf("ramdisk address = %x\n",pheader->ramdisk_addr);
+	printf("ramdisk size    = 0x%x\n",pheader->ramdisk_size);
+	printf("ramdisk address = 0x%x\n",pheader->ramdisk_addr);
 
-	printf("second size     = %x\n",pheader->second_size);
-	printf("second address  = %x\n",pheader->second_addr);
+	printf("second size     = 0x%x\n",pheader->second_size);
+	printf("second address  = 0x%x\n",pheader->second_addr);
 
-	printf("tag address     = %x\n",pheader->tags_addr);
-	printf("page size       = %x\n",pheader->page_size);
+	printf("tag address     = 0x%x\n",pheader->tags_addr);
+	printf("page size       = 0x%x\n",pheader->page_size);
 }
 
 //First parameter will be the path of the img file
@@ -107,7 +107,7 @@ int main(int argc, char **argv)
     			printHeaderInfo(&header);
     			if(base_address != 0)
     			{
-    				printf("base address    = %x\n", base_address);
+    				printf("base address    = 0x%x\n", base_address);
     			}
     		}
 
