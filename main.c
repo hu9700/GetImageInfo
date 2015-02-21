@@ -87,7 +87,7 @@ int main(int argc, char **argv)
     	}
     	else
     	{//succeed to open file
-    		if(read(fd, header, sizeof(boot_img_hdr)) != sizeof(boot_img_hdr))
+    		if(read(fd, &header, sizeof(boot_img_hdr)) != sizeof(boot_img_hdr))
     		{
     			perror("Fail to read file");
     			result = -1;
