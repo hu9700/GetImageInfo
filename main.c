@@ -37,15 +37,15 @@ int isArgOk(int argc, char **argv)
 
 //return 0 means error
 //I assume the base address will not be 0
-unsigned getBaseAddress(unsigned temp_kernel_offset, unsigned temp_ramdisk_offset)
+unsigned getBaseAddress(unsigned kernel_address, unsigned ramdisk_address)
 {
 	unsigned base_address = 0;
 
-	if(temp_kernel_offset < temp_ramdisk_offset)
+	if(kernel_address < ramdisk_address)
 	{
-		if(temp_ramdisk_offset - temp_kernel_offset == ramdisk_offset - kernel_offset)
+		if(ramdisk_address - kernel_address == ramdisk_offset - kernel_offset)
 		{
-			base_address = temp_ramdisk_offset - ramdisk_offset;
+			base_address = ramdisk_address - ramdisk_offset;
 		}
 	}
 
