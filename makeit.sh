@@ -1,3 +1,3 @@
 #!/bin/sh
-rm ./*.o
+#rm ./*.o
 gcc main.c -o GetImageInfo
